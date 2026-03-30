@@ -11,6 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Elsie:wght@400;900&family=League+Script&family=Ribeye+Marrow&family=Splash&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 <style>
      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -18,7 +21,7 @@
       --cream: #f5f1eb;
       --ink:   #1a1714;
       --warm:  #F2AF29;
-      --accent:#9A879D;
+      --accent:#5f94ca;
     }
 
     html { scroll-behavior: smooth; }
@@ -30,6 +33,7 @@
       font-weight: 300;
       overflow-x: hidden;
     }
+    /* ── NAV ─────────────────────────────────── */
         nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -43,11 +47,11 @@
     }
 
     nav .logo {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Bebas Neue', cursive;
       font-weight: bold;
+      font-style: italic;
       font-size: 1.5rem;
-      letter-spacing: 0.05em;
-      color: var(--ink);
+      color: var(--accent);
       text-decoration: none;
       opacity: 0.7;
     }
@@ -107,7 +111,7 @@
 }
 
 .project-intro h1{
-  font-family:'Instrument Serif', serif;
+  font-family:'Bebas Neue', cursive;
   font-size:3rem;
   color: var(--ink);
 }
@@ -115,7 +119,8 @@
 .item h3 {
   color:var(--ink);
   opacity: 0.7;
-  font-family: 'Instrument Serif', serif;
+font-family: Oswald, sans-serif;
+font-weight: 450;
   font-size: 2rem;
   margin: 10px 0 5px;
 }
@@ -146,7 +151,7 @@
   z-index:1;
 }
 
-  /* ── FOOTER ──────────────────────────────── */
+    /* ── FOOTER ──────────────────────────────── */
     footer {
       padding: 6rem 6vw 3rem;
       display: flex;
@@ -156,7 +161,7 @@
     }
 
     .footer-heading {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Bebas Neue', cursive;
       font-size: clamp(2rem, 5vw, 4rem);
       font-style: italic;
       line-height: 1;

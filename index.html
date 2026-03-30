@@ -11,6 +11,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Elsie:wght@400;900&family=League+Script&family=Ribeye+Marrow&family=Splash&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -19,7 +22,7 @@
       --cream: #f5f1eb;
       --ink:   #1a1714;
       --warm:  #F2AF29;
-      --accent:#9A879D;
+      --accent:#5f94ca;
     }
 
     html { scroll-behavior: smooth; }
@@ -46,11 +49,11 @@
     }
 
     nav .logo {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Bebas Neue', cursive;
       font-weight: bold;
+      font-style: italic;
       font-size: 1.5rem;
-      letter-spacing: 0.05em;
-      color: var(--ink);
+      color: var(--accent);
       text-decoration: none;
       opacity: 0.7;
     }
@@ -82,7 +85,8 @@
       padding-top: 20vh;
       padding-left: 10vh;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
+      z-index: 20;
     }
 
     .hero-content {
@@ -95,7 +99,7 @@
       font-size: 1rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--warm);
       opacity: 0;
       animation: fadeUp 0.8s 0.2s forwards;
     }
@@ -111,7 +115,7 @@
 
     .hero-heading em {
       font-style: italic;
-      color: var(--accent);
+      color: var(--ink);
       
     }
 
@@ -123,9 +127,12 @@
 
     .hero-sub {
       max-width: 36ch;
+      background-color: rgb(26, 23, 20, 0.8);
+      padding: 1rem 1rem;
+      border-radius: 10px;
       font-size: 1rem;
       line-height: 1.7;
-      color: var(--ink);
+      color: var(--warm);
       opacity: 0;
       animation: fadeUp 0.9s 0.65s forwards;
     }
@@ -134,7 +141,7 @@
     .hero::after {
       content: '';
       position: absolute;
-      bottom: 4.5rem;
+      bottom: 3.5rem;
       left: 6vw;
       width: 40px;
       height: 1px;
@@ -145,7 +152,7 @@
 
     .scroll-hint {
       position: absolute;
-      bottom: 4rem;
+      bottom: 3rem;
       left: calc(6vw + 56px);
       font-size: 0.7rem;
       letter-spacing: 0.14em;
@@ -157,19 +164,19 @@
 
     .me {
       position: absolute;
-      top: 25%;
-      right: 3%;
+      width: 60vw;
+      top: 20%;
+      right: 0%;
       user-select: none;
       pointer-events: none;
       animation: fadeIn 1.4s 0.3s forwards;
       image-rendering:optimizeQuality;
+      z-index: -1;
     }
 
     .me img {
-  width: 30vw;
+  width: 60vw;
   height: auto;
-  border-radius: 20px;
-
 }
 
 .me,
@@ -230,6 +237,8 @@
       object-fit: cover;
       display: block;
       transition: transform 0.6s ease;
+      border: 10px solid #1a1714;
+      border-radius: 10px;
     }
 
     .project:hover .project-image img,
@@ -245,12 +254,10 @@
 
     .project-title {
       color: var(--ink);
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Bebas Neue', cursive;
       font-size: clamp(1.2rem, 2.2vw, 1.8rem);
-      letter-spacing: -0.01em;
       line-height: 1.1;
       text-decoration: none;
-      font-weight: bold;
     }
 
     .project-year {
@@ -276,7 +283,7 @@
     }
 
     .footer-heading {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Bebas Neue', cursive;
       font-size: clamp(2rem, 5vw, 4rem);
       font-style: italic;
       line-height: 1;
@@ -357,7 +364,7 @@
     </p>
     </div>
    <div class="me">
-      <img src="me.jpg">
+      <img src="me.png">
     </div>
     <span class="scroll-hint">Scroll to explore</span>
   </section>
@@ -371,10 +378,10 @@
       <!-- PROJECT 1 -->
       <article class="project reveal">
         <div class="project-image">
-         <a href="visualidentity.html"><img src="visualidentitycover.png" alt="Visual Identity"></a>
+         <a href="visualidentity.html"><img src="visualidentitycover.png" alt="Visual Identity System"></a>
         </div>
         <div class="project-meta">
-          <a href="visualidentity.html" class="project-title">Visual Identity</a>
+          <a href="visualidentity.html" class="project-title">Visual Identity System</a>
           <span class="project-year">October 2025</span>
         </div> 
         <p class="project-tags">Branding · Identity</p>
@@ -464,7 +471,7 @@
   setInterval(() => {
     word.style.fontFamily = fonts[index];
     index = (index + 1) % fonts.length;
-  }, 300); 
+  }, 500); 
 </script>
 </body>
 </html>
